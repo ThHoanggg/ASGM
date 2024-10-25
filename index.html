@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <h1>Khách Sạn </h1>
+        </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listkhoahoc"> Danh sách Phòng</a>
+        <a href="#listhocvien"> Nhân Viên</a>
+        <a href="#listcoso"> Cơ sở</a>
+    </nav>
+    <main> 
+        <section id="listkhoahoc">
+            <h2>Danh sách Phòng </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listhocvien">
+            <h2> Danh sách Nhân Viên </h2>
+            <div id="data"></div>
+        </section>
+        <section id="listcoso">
+            <h2> Danh sách cơ sở</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listthuonghieu">
+            <h2> </h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Họ tên sinh viên: Nguyễn Long Thiên Hoàng@PS33116</footer>
+</body>
+</html>
+<script type="module">
+   import { showlistkhoahoc, showlisthocvien, showlistcoso , showlistthuonghieu} from './js/app.js';
+   document.querySelector("#listkhoahoc #data").innerHTML = showlistkhoahoc();
+   document.querySelector("#listhocvien #data").innerHTML = showlisthocvien();
+   document.querySelector("#listcoso #data").innerHTML = showlistcoso();
+   document.querySelector("#listthuonghieu #data").innerHTML = await showlistthuonghieu();
+
+</script>
